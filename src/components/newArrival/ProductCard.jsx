@@ -1,11 +1,12 @@
+/* eslint-disable react/prop-types */
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../../context";
 import AddToCartIcon from "../svgIcon/AddToCartIcon";
 
-const ProductCard = ({ image, title, category, price, id }) => {
+const ProductCard = ({ product }) => {
   const { cartItems, addToCart, removeFromCart } = useContext(CartContext);
   const [isAdded, toggleAdded] = useState(false);
-
+  const { image, title, category, price, id } = product;
   useEffect(() => {
     const found = cartItems.find((item) => item.id === id);
     toggleAdded(found);
