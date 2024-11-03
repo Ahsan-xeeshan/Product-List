@@ -30,12 +30,12 @@ const ProductCard = ({ image, title, category, price, id }) => {
           className="h-full w-full object-cover object-top lg:h-full lg:w-full bg-gray-100"
         />
       </div>
-      <div className="mt-4 px-3 pb-4 h-28">
+      <div className="mt-4 px-3 pb-4 h-[120px]">
         <div className="mt-2">
           <h3 className="text-sm text-gray-700">{title}</h3>
           <p className="mt-1 text-sm text-gray-500">{category}</p>
         </div>
-        <div className="mt-3">
+        <div className="mt-2">
           <p className="text-sm font-medium text-gray-900">${price}</p>
         </div>
       </div>
